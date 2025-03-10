@@ -3,7 +3,7 @@ import { filmData } from '@/filmData';
 import Navbar from '../components/NavBar'; 
 import '../app/globals.css';
 
-const work = () => {
+const Work = () => {
   const [playingIndex, setPlayingIndex] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -84,4 +84,4 @@ const work = () => {
   );
 };
 
-export default work;
+export default Work;

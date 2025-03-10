@@ -2,8 +2,10 @@ import React from "react";
 import Link from "next/link";
 import "../app/globals.css"; // Adjust path if needed
 import Navbar from '../components/NavBar'; 
+import Image from 'next/image';
 
-const about = () => {
+
+const About = () => {
   return (
     <div
       className="relative min-h-screen bg-cover bg-center flex flex-col justify-between px-16 py-20 overflow-hidden"
@@ -16,10 +18,12 @@ const about = () => {
         <div className="col-span-5 relative">
           <Link href="/" className="block group">
             <div className="absolute -top-4 -left-4 w-48 h-48 border-4 border-black"></div>
-            <img
+            <Image
               src="/filmClips/bio.jpg"
               alt="About me"
               className="relative w-100 h-100 rounded-md object-cover shadow-xl grayscale group-hover:grayscale-0 transition-all duration-500"
+			  width={100}
+			  height={100}
             />
           </Link>
         </div>
@@ -59,4 +63,4 @@ const about = () => {
   );
 };
 
-export default about;
+export default About;

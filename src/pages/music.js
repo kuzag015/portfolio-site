@@ -3,7 +3,7 @@ import "../app/globals.css"; // Adjust path if needed
 import Navbar from "../components/NavBar";
 import { musicData } from '@/musicData';
 
-const music = () => {
+const Music = () => {
   return (
     <div className="min-h-screen bg-cream py-20 px-8 lg:px-16">
       {/* Navbar Section */}
@@ -38,4 +38,4 @@ const music = () => {
   );
 };
 
-export default music;
+export default Music;
