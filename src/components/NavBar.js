@@ -1,27 +1,21 @@
+// Navbar.js
+
+import React from 'react';
 import Link from 'next/link';
 
 const Navbar = () => {
   return (
-    <nav className="bg-transparent text-gray-900 py-4">
-      <div className="container mx-auto flex justify-center space-x-6">
-        <Link href="/" className="text-sm font-medium hover:text-gray-600 transition-colors duration-300">
-          Home
-        </Link>
-        <Link href="/work" className="text-sm font-medium hover:text-gray-600 transition-colors duration-300">
-          Film Work
-        </Link>
-		<Link href="/music" className="text-sm font-medium hover:text-gray-600 transition-colors duration-300">
-          Music Production
-        </Link>
-        <Link href="/about" className="text-sm font-medium hover:text-gray-600 transition-colors duration-300">
-          About
-        </Link>
-        <Link href="/contact" className="text-sm font-medium hover:text-gray-600 transition-colors duration-300">
-          Contact
-        </Link>
-		<Link href="/services" className="text-sm font-medium hover:text-gray-600 transition-colors duration-300">
-          Services
-        </Link>
+    <nav className="flex justify-between items-center py-6 px-8">
+      <Link href="/" className="text-3xl font-bold text-black">
+        <span className="text-xl font-semibold">GK</span> {/* Replace with the "GK" monogram */}
+      </Link>
+
+      <div className="flex space-x-6">
+        <Link href="/about" className="text-lg text-gray-900 hover:text-black">About</Link>
+        <Link href="/services" className="text-lg text-gray-900 hover:text-black">Services</Link>
+        <Link href="/work" className="text-lg text-gray-900 hover:text-black">Work</Link>
+        <Link href="/music" className="text-lg text-gray-900 hover:text-black">Music Production</Link> {/* Added Music Production link */}
+        <Link href="/contact" className="text-lg text-gray-900 hover:text-black">Contact</Link>
       </div>
     </nav>
   );

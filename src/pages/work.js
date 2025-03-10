@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { filmData } from '@/filmData';
-import Navbar from '../components/NavBar'; 
+import Navbar from '../components/NavBar';
 import '../app/globals.css';
 
 const Work = () => {
@@ -18,17 +18,17 @@ const Work = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white py-12 px-8">
-      <h1 className="text-4xl font-extrabold text-gray-900 mb-10 text-center">FILM WORK</h1>
+    <div className="min-h-screen bg-white py-12 px-6 sm:px-8 md:px-12 lg:px-16">
+      <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-10 text-center">FILM WORK</h1>
 
       {/* Navbar component */}
       <Navbar />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mt-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
         {filmData.map((film, index) => (
           <div
             key={index}
-            className={`relative bg-white shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300 ease-in-out cursor-pointer rounded-none ${
+            className={`relative bg-white shadow-md overflow-hidden transform transition-transform duration-300 ease-in-out cursor-pointer rounded-md ${
               film.size === 'large' ? 'col-span-2 row-span-2' : 'col-span-1'
             }`}
             onClick={() => handleCardClick(index)}
@@ -38,13 +38,13 @@ const Work = () => {
                 src={film.video}
                 controls
                 autoPlay
-                className={`w-full ${film.size === 'large' ? 'h-96' : 'h-56'} object-cover`}
+                className={`w-full ${film.size === 'large' ? 'h-72 sm:h-96' : 'h-48 sm:h-56'} object-cover`}
               />
             ) : (
               <img
                 src={film.poster}
                 alt={film.title}
-                className={`w-full ${film.size === 'large' ? 'h-96' : 'h-56'} object-cover`}
+                className={`w-full ${film.size === 'large' ? 'h-72 sm:h-96' : 'h-48 sm:h-56'} object-cover`}
               />
             )}
             <div className="absolute bottom-4 left-4 right-4 bg-black bg-opacity-50 p-4 text-white">
