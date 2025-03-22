@@ -28,7 +28,7 @@ const Work = () => {
         {filmData.map((film, index) => (
           <div
             key={index}
-            className={`relative bg-white shadow-md overflow-hidden transform transition-transform duration-300 ease-in-out cursor-pointer rounded-md ${
+            className={`relative bg-white transform transition-transform duration-300 ease-in-out cursor-pointer rounded-none ${
               film.size === 'large' ? 'col-span-2 row-span-2' : 'col-span-1'
             }`}
             onClick={() => handleCardClick(index)}
@@ -60,7 +60,7 @@ const Work = () => {
           className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50"
           onClick={handleCloseModal}
         >
-          <div className="relative bg-white p-6 rounded-lg shadow-lg max-w-4xl w-full">
+          <div className="relative bg-white p-6 rounded-lg max-w-4xl w-full">
             <button
               className="absolute top-4 right-4 text-white text-2xl"
               onClick={handleCloseModal}

@@ -1,8 +1,8 @@
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import Modal from "react-modal";
-import "../app/globals.css"; 
-import Navbar from '../components/NavBar'; 
+import "../app/globals.css";
+import Navbar from '../components/NavBar';
 
 Modal.setAppElement("#__next"); // Accessibility requirement
 
@@ -37,7 +37,7 @@ export default function Contact() {
       <div className="min-h-screen flex justify-center items-center bg-[#ffe8a2] px-4">
         <button
           onClick={() => setModalIsOpen(true)}
-          className="px-6 py-3 text-3xl font-bold font-serif rounded-md bg-[#fffdfb] text-black hover:bg-[#e9decb] transition"
+          className="px-6 py-3 text-3xl font-bold font-serif rounded-md bg-[#fffdfb] text-black hover:bg-[#e9decb] transition w-full sm:w-auto"
         >
           CONTACT
         </button>
@@ -55,7 +55,7 @@ export default function Contact() {
               name="name"
               placeholder="Your Name"
               required
-              className="p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#e9decb]"
+              className="p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#e9decb] w-full"
               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
             />
             <input
@@ -63,20 +63,20 @@ export default function Contact() {
               name="email"
               placeholder="Your Email"
               required
-              className="p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#e9decb]"
+              className="p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#e9decb] w-full"
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
             />
             <textarea
               name="message"
               placeholder="Your Message"
               required
-              className="p-3 border rounded-md h-24 focus:outline-none focus:ring-2 focus:ring-[#e9decb]"
+              className="p-3 border rounded-md h-24 focus:outline-none focus:ring-2 focus:ring-[#e9decb] w-full"
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
             />
             <select
               name="service"
               required
-              className="p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#e9decb]"
+              className="p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#e9decb] w-full"
               onChange={(e) => setFormData({ ...formData, service: e.target.value })}
             >
               <option value="">Select a Service</option>

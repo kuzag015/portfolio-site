@@ -16,7 +16,7 @@ const Services = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 sm:gap-12">
         {/* Film Composition Card */}
         <div className="bg-white p-8 sm:p-10 lg:p-12 rounded-none">
-          <h2 className="text-7xl sm:text-5xl lg:text-6xl font-serif text-[#333] mb-6 sm:mb-8 leading-tight">Film Composition</h2>
+          <h2 className="text-5xl sm:text-6xl lg:text-5xl font-serif text-[#333] mb-6 sm:mb-8 leading-tight">Film Composition</h2>
           <p className="text-base sm:text-lg text-gray-800 leading-relaxed">
             As a composer for film, I work closely with filmmakers to craft soundtracks that align with the visual narrative, enhancing the emotional depth of the story. My approach blends traditional orchestration with modern soundscapes to create a cohesive, impactful soundtrack.
           </p>
@@ -26,8 +26,8 @@ const Services = () => {
         </div>
 
         {/* Editing & Mixing Card */}
-        <div className="bg-white p-8 sm:p-10 lg:p-12 rounded-none mt-8">
-          <h2 className="text-7xl sm:text-5xl lg:text-7xl font-serif text-[#333] mb-6 sm:mb-8 leading-tight">Editing & Mixing</h2>
+        <div className="bg-white p-8 sm:p-10 lg:p-12 rounded-none mt-8 sm:mt-0">
+          <h2 className="text-5xl sm:text-6xl lg:text-5xl font-serif text-[#333] mb-6 sm:mb-8 leading-tight">Editing & Mixing</h2>
           <p className="text-base sm:text-lg text-gray-800 leading-relaxed">
             With years of experience using industry-standard tools like Pro Tools, Logic Pro, and Ableton Live, I offer expert audio editing and mixing services for a variety of media. I ensure each track is polished, balanced, and optimized for the best possible sound quality.
           </p>
@@ -37,8 +37,8 @@ const Services = () => {
         </div>
 
         {/* Music Production Card */}
-        <div className="bg-white p-8 sm:p-10 lg:p-12 rounded-none mt-4 lg:mt-8">
-          <h2 className="text-7xl sm:text-5xl lg:text-6xl font-serif text-[#333] mb-6 sm:mb-8 leading-tight">Music Production</h2>
+        <div className="bg-white p-8 sm:p-10 lg:p-12 rounded-none mt-4 lg:mt-0">
+          <h2 className="text-5xl sm:text-6xl lg:text-5xl font-serif text-[#333] mb-6 sm:mb-8 leading-tight">Music Production</h2>
           <p className="text-base sm:text-lg text-gray-800 leading-relaxed">
             With over a decade of experience in music production across genres like hip hop, R&B, and pop, I bring a wealth of knowledge and creativity to every project. I specialize in blending innovative sound design with refined production techniques to create tracks that stand out.
           </p>

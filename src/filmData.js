@@ -7,6 +7,20 @@ export const filmData = [
 	  poster: "/filmClips/GEN.jpg",
 	},
 	{
+		title: "Ellesse",
+		director: "JP Dellanno",
+		date: "",
+		video: "/filmClips/Ellesse.mp4",
+		poster: "/filmClips/ellesse.png",
+	  },
+	  {
+		title: "PUMA/CONCEPTS",
+		director: "JP Dellanno",
+		date: "",
+		video: "/filmClips/puma.mp4",
+		poster: "/filmClips/puma.png",
+	  },
+	{
 	  title: "ILARIA",
 	  director: "Minka Bleakly",
 	  date: "",
