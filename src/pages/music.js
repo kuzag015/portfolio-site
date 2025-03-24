@@ -1,40 +1,64 @@
-import React from "react";
-import "../app/globals.css";
+import React, { useState } from "react";
+import { Howl } from "howler";
 import Navbar from "../components/NavBar";
 import { musicData } from "@/musicData";
+import "../app/globals.css";
 
 const Music = () => {
+  const [playingIndex, setPlayingIndex] = useState(null);
+  const [audioInstance, setAudioInstance] = useState(null);
+
+  const handleTogglePlayPause = (index, audioUrl) => {
+    if (playingIndex === index) {
+      // If the same track is clicked again, pause it
+      if (audioInstance) {
+        audioInstance.pause();
+      }
+      setPlayingIndex(null); // Reset playing index
+    } else {
+      // Play a new track
+      if (audioInstance) {
+        audioInstance.stop();
+      }
+      const newAudio = new Howl({
+        src: [audioUrl],
+        html5: true, // Use HTML5 Audio for better compatibility
+      });
+      newAudio.play();
+      setPlayingIndex(index);
+      setAudioInstance(newAudio);
+    }
+  };
+
   return (
-    <div className="min-h-screen bg-cream py-16 px-6 lg:px-20">
-      {/* Navbar Section */}
+    <div className="min-h-screen bg-white py-16 px-6 lg:px-20">
       <Navbar />
 
-      {/* Main Heading */}
-      <h1 className="text-5xl md:text-6xl font-semibold font-serif text-center text-gray-900 mb-16 leading-snug tracking-wide">
+      <h1 className="text-5xl md:text-6xl font-semibold font-serif text-center text-black mb-16 leading-snug tracking-wide">
         Concepts
       </h1>
 
-      {/* Music Cards Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 max-w-6xl mx-auto">
         {musicData.map((track, index) => (
           <div
             key={index}
-            className="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:scale-102 border-2 border-gray-300"
+            className="bg-white p-6 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:scale-105 border border-gray-200"
           >
-            {/* Track Description */}
-            <p className="text-lg text-gray-800 mb-5 leading-relaxed">
-              {track.description}
-            </p>
+            <div className="mb-5">
+              <p className="text-lg text-black font-medium">{track.title}</p>
+              <p className="text-sm text-gray-500">{track.mood}</p>
+            </div>
 
-            {/* Audio Player */}
-            <audio
-              controls
-              className="w-full rounded-lg bg-gray-100 border border-gray-300 shadow-sm hover:border-gray-500 transition-all duration-300 ease-in-out"
-              aria-label={`Audio player for ${track.title}`}
-            >
-              <source src={track.audioUrl} type="audio/mp3" />
-              Your browser does not support the audio element.
-            </audio>
+            <p className="text-base text-gray-800 leading-relaxed mb-5">{track.description}</p>
+
+            <div className="flex space-x-4">
+              <button
+                onClick={() => handleTogglePlayPause(index, track.audioUrl)}
+                className="py-2 px-4 text-sm font-semibold border-2 border-black rounded-md transition duration-300 ease-in-out hover:bg-black hover:text-white"
+              >
+                {playingIndex === index ? "Pause" : "Play"}
+              </button>
+            </div>
           </div>
         ))}
       </div>
