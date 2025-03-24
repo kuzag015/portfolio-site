@@ -6,6 +6,13 @@ export const filmData = [
 	  video: "/filmClips/GEN.mp4",
 	  poster: "/filmClips/GEN.jpg",
 	},
+	{
+		title: "ELLESSE",
+		director: "JP Dellanno",
+		date: "",
+		video: "/filmClips/Ellesse.mp4",
+		poster: "/filmClips/ellesse.png",
+	  },
 	  {
 		title: "PUMA/CONCEPTS",
 		director: "JP Dellanno",
